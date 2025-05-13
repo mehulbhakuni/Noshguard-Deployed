@@ -1,0 +1,148 @@
+/* Import Tailwind CSS base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Green Vitality Theme Custom Styles --- */
+
+/* Apply base font and color */
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #333333; /* charcoal */
+    background-color: #E6F4EA; /* soft-green */
+    -webkit-tap-highlight-color: transparent; /* Disable blue tap highlight on mobile */
+}
+
+/* Headings Font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #333333; /* charcoal */
+}
+
+/* Custom Checkbox Styling (from theme) */
+.custom-checkbox:checked {
+    background-color: #5DB075; /* fresh-green */
+    border-color: #5DB075;
+}
+.custom-checkbox:checked::before {
+    content: '✓';
+    color: white;
+    display: block;
+    text-align: center;
+    line-height: 1; /* Adjust for vertical centering */
+    font-size: 0.8em;
+    font-weight: bold;
+}
+input[type="checkbox"].custom-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.15rem; /* Slightly smaller */
+    height: 1.15rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    /* margin-right: 0.5rem; Remove margin, use gap in parent */
+    transition: background-color 0.2s, border-color 0.2s;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+input[type="checkbox"].custom-checkbox:focus {
+     outline: 2px solid transparent;
+     outline-offset: 2px;
+     box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #a7f3d0; /* fresh-green focus ring */
+}
+
+
+/* Button Base Styles (Can be extended with Tailwind) */
+.btn-theme {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.5rem; /* px-6 equivalent */
+    padding-right: 1.5rem;
+    padding-top: 0.5rem; /* py-2 equivalent */
+    padding-bottom: 0.5rem;
+    border-width: 1px;
+    border-color: transparent;
+    font-size: 1rem; /* text-base equivalent */
+    font-weight: 500; /* font-medium equivalent */
+    border-radius: 0.5rem; /* rounded-lg equivalent */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-sm equivalent */
+    outline: none; /* focus:outline-none equivalent */
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 200ms;
+}
+.btn-primary {
+    color: white;
+    background-color: #5DB075; /* fresh-green, replace with actual value from Tailwind config if needed */
+}
+.btn-primary:hover {
+    background-color: rgba(93, 176, 117, 0.9);
+}
+.btn-primary:focus {
+    --tw-ring-color: #5DB075; /* fresh-green */
+    box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+.btn-secondary {
+    color: #333333; /* charcoal */
+    background-color: #ffffff;
+    border-color: #D1D5DB; /* gray-300 */
+}
+.btn-secondary:hover {
+    background-color: #F9FAFB; /* gray-50 */
+}
+.btn-secondary:focus {
+    --tw-ring-color: #5DB075; /* fresh-green */
+    box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+.btn-danger {
+    color: #ffffff;
+    background-color: #DC2626; /* danger-red, replace with actual value from Tailwind config if needed */
+}
+.btn-danger:hover {
+    background-color: rgba(220, 38, 38, 0.9);
+}
+.btn-danger:focus {
+    --tw-ring-color: #DC2626; /* danger-red */
+    box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+.btn-warning {
+    color: #ffffff;
+    background-color: #EA580C; /* alert-orange, replace with actual value from Tailwind config if needed */
+}
+.btn-warning:hover {
+    background-color: rgba(234, 88, 12, 0.9);
+}
+.btn-warning:focus {
+    --tw-ring-color: #EA580C; /* alert-orange */
+    box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+
+
+/* Card Base Style */
+.themed-card {
+    background-color: #ffffff;
+    border-radius: 1rem; /* rounded-xl equivalent */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-card, replace with actual value from Tailwind config if needed */
+    padding: 1.5rem; /* p-6 equivalent */
+}
+
+/* Modal Styles (using Tailwind utilities mostly in PHP) */
+/* Add minor adjustments if needed */
+.modal-overlay { /* Example: ensure background click closes */
+    cursor: pointer;
+}
+.modal-content { /* Prevent bg click from closing content */
+    cursor: default;
+}
+
+
+/* Specific overrides if Tailwind isn't sufficient */
+pre {
+     font-family: 'Consolas', 'Monaco', monospace; /* More suitable mono font */
+     line-height: 1.4;
+}
+
+
+/* Add other custom styles needed for the Green Vitality theme below */
